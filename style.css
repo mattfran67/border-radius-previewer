@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.content {
+  max-width: 500px;
+  margin: auto;
+}
+
+#object {
+  width: 150px;
+  height: 100px;
+  margin: auto;
+  border: 1px solid;
+}
+
+input {
+  width: 100%;
+}
