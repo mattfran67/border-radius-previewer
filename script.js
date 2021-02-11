@@ -3,6 +3,7 @@ const inputs = document.querySelectorAll('#borders input');
 const showSizeInputs = document.querySelector('#showSizeInputs');
 const sizeInputs = document.querySelectorAll('#widthHeight input');
 const object = document.querySelector('#object');
+const copy = document.querySelector('#copy');
 
 const border = [
   'borderTopLeftRadius',
@@ -17,7 +18,7 @@ const size = ['width', 'height'];
 showSizeInputs.addEventListener('click', e => {
   document.querySelector('#widthHeight')
   .style.display = e.target.checked ? 'block' : 'none';
-})
+});
 
 inputs.forEach((input, index) => {
   input.addEventListener('keydown', e => {
@@ -33,6 +34,10 @@ sizeInputs.forEach((input, index) => {
 
     object.style[size[index]] = `${value}px`;
   });
+});
+
+copy.addEventListener('click', () => {
+  navigator.clipboard.writeText(object.style.borderRadius);
 })
 
 // Funções
