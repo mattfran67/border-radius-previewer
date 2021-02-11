@@ -12,16 +12,30 @@
   <div class="content">
     <h1>Visualizador de Border Radius</h1>
 
+    <label>
+      <input type="checkbox" id="showSizeInputs">
+      <span>Dimensões</span>
+    </label>
+
+    <div id="widthHeight" style="display: none;">
+      <label for="width">Largura</label>
+      <input type="text" id="width">
+      <label for="height">Altura</label>
+      <input type="text" id="height">
+    </div>
+
     <div id="object"></div>
 
-    <label for="top-left">Top Left</label>
-    <input id="top-left" type="text">
-    <label for="top-right">Top Right</label>
-    <input id="top-right" type="text">
-    <label for="bottom-right">Bottom Right</label>
-    <input id="bottom-right" type="text">
-    <label for="bottom-left">Bottom Left</label>
-    <input id="bottom-left" type="text">
+    <div id="borders">
+      <label for="top-left">Top Left</label>
+      <input id="top-left" type="text">
+      <label for="top-right">Top Right</label>
+      <input id="top-right" type="text">
+      <label for="bottom-right">Bottom Right</label>
+      <input id="bottom-right" type="text">
+      <label for="bottom-left">Bottom Left</label>
+      <input id="bottom-left" type="text">
+    </div>
     <button>Copiar</button>
   </div>
 

@@ -14,10 +14,10 @@ body {
 #object {
   width: 150px;
   height: 100px;
-  margin: auto;
+  margin: 10px auto;
   border: 1px solid;
 }
 
-input {
+input[type="text"] {
   width: 100%;
 }
