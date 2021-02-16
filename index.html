@@ -26,6 +26,11 @@
 
     <div id="object" style="border-radius: 0;"></div>
 
+    <label>
+      <input type="checkbox" id="showSideInputs">
+      <span>Todos os Lados</span>
+    </label>
+
     <div id="borders">
       <label for="top-left">Top Left</label>
       <input id="top-left" type="text">
@@ -35,6 +40,10 @@
       <input id="bottom-right" type="text">
       <label for="bottom-left">Bottom Left</label>
       <input id="bottom-left" type="text">
+      <div id="allSidesInput" style="display: none;">
+        <label for="all-sides">Todos os Lados</label>
+        <input id="all-sides" type="text">
+      </div>
     </div>
     <button id="copy">Copiar</button>
   </div>
