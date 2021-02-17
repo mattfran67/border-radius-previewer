@@ -6,48 +6,65 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Border Radius</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="content">
-    <h1>Visualizador de Border Radius</h1>
-
-    <label>
-      <input type="checkbox" id="showSizeInputs">
-      <span>Dimensões</span>
-    </label>
-
-    <div id="widthHeight" style="display: none;">
-      <label for="width">Largura</label>
-      <input type="text" id="width">
-      <label for="height">Altura</label>
-      <input type="text" id="height">
-    </div>
-
-    <div id="object" style="border-radius: 0;"></div>
-
-    <label>
-      <input type="checkbox" id="showSideInputs">
-      <span>Todos os Lados</span>
-    </label>
-
-    <div id="borders">
-      <label for="top-left">Top Left</label>
-      <input id="top-left" type="text">
-      <label for="top-right">Top Right</label>
-      <input id="top-right" type="text">
-      <label for="bottom-right">Bottom Right</label>
-      <input id="bottom-right" type="text">
-      <label for="bottom-left">Bottom Left</label>
-      <input id="bottom-left" type="text">
-      <div id="allSidesInput" style="display: none;">
-        <label for="all-sides">Todos os Lados</label>
-        <input id="all-sides" type="text">
+    <div class="card">
+      <h1 class="title">Visualizador de Border Radius</h1>
+  
+      <label class="checkbox-label">
+        <input type="checkbox" id="showSizeInputs" autocomplete="off">
+        <span>Dimensões</span>
+      </label>
+  
+      <div id="widthHeight" style="display: none;">
+        <label for="width">Largura</label>
+        <input type="text" id="width" autocomplete="off">
+        <label for="height">Altura</label>
+        <input type="text" id="height" autocomplete="off">
+      </div>
+  
+      <div class="object-container">
+        <div id="object" style="border-radius: 0;"></div>
       </div>
     </div>
-    <button id="copy">Copiar</button>
+
+    <div class="card">
+      <label class="checkbox-label">
+        <input type="checkbox" id="showSideInputs" autocomplete="off">
+        <span>Todos os Lados</span>
+      </label>
+  
+      <div id="borders">
+        <label for="top-left">Top Left</label>
+        <input id="top-left" type="text" autocomplete="off">
+        <label for="top-right">Top Right</label>
+        <input id="top-right" type="text" autocomplete="off">
+        <label for="bottom-right">Bottom Right</label>
+        <input id="bottom-right" type="text" autocomplete="off">
+        <label for="bottom-left">Bottom Left</label>
+        <input id="bottom-left" type="text" autocomplete="off">
+        <div id="allSidesInput" style="display: none;">
+          <label for="all-sides">Todos os Lados</label>
+          <input id="all-sides" type="text" autocomplete="off">
+        </div>
+      </div>
+      <button id="copy">Copiar</button>
+    </div>
+
+    <div class="card note">
+      Nota: Valores em pixels
+    </div>
   </div>
 
+  <div class="modal-container">
+    <div class="modal-content">
+      <div class="modal-body">Copiado com sucesso!</div>
+    </div>
+  </div>
   <script src="./script.js"></script>
 </body>
 

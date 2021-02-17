@@ -9,6 +9,8 @@ const showSideInputs = document.querySelector('#showSideInputs');
 const object = document.querySelector('#object');
 // botão copiar
 const copy = document.querySelector('#copy');
+// modal
+const modal = document.querySelector('.modal-container');
 
 const border = [
   'borderTopLeftRadius',
@@ -30,14 +32,16 @@ showSizeInputs.addEventListener('click', ({ target: { checked }}) => {
 
 // Mostra o input de todos os lados
 showSideInputs.addEventListener ('click', ({ target: { checked }}) => {
+  const display = checked ? 'none' : 'block';
   for (let i = 0; i < 4; i++) {
-    const display = checked ? 'none' : 'block';
     inputs[i].style.display = display;
     inputs[i].previousElementSibling.style.display = display;
   }
 
   document.querySelector('#allSidesInput')
   .style.display = checked ? 'block' : 'none';
+  inputs[4].value = '';
+  object.style.borderRadius = '0';
 });
 
 // Muda o 'border-radius' do elemento
@@ -61,11 +65,13 @@ sizeInputs.forEach((input, index) => {
 // Copia o 'border-radius' do elemento
 copy.addEventListener('click', () => {
   navigator.clipboard.writeText(object.style.borderRadius);
+  modal.style.display = 'block';
+  setTimeout(() => modal.style.display = 'none', 3900);
 })
 
 /* Funções */
 function inputFormat(e) {
-  const pattern = /^((0|\d{1,2}|[1-4]\d{0,2})(\.\d{0,3})?)?$/;
+  const pattern = /^((0|[1-9]\d?|[1-4]\d{2})(\.\d{0,3})?)?$/;
   let value;
 
   e.preventDefault();
